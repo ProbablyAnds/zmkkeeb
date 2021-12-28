@@ -1,12 +1,12 @@
-# Adafruit Feather nRF52840 Express board configuration
+# BlueMicro840 board configuration
 
-# Copyright (c) 2020 Tobias Svehagen
-# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2020 Pete Johanson, Derek Schmell
+# SPDX-License-Identifier: MIT
 
-if BOARD_ADAFRUIT_FEATHER_NRF52840
+if BOARD_ADAFRUIT_FEATHER_NRF52840_ZMK
 
 config BOARD
-	default "adafruit_feather_nrf52840"
+	default "adafruit_feather_nrf52840_zmk"
 
 if USB
 
@@ -21,4 +21,13 @@ endif # USB
 config BT_CTLR
 	default BT
 
-endif # BOARD_ADAFRUIT_FEATHER_NRF52840
+config ZMK_BLE
+	default y
+
+config ZMK_USB
+	default y
+
+config ZMK_BATTERY_VOLTAGE_DIVIDER
+	default y
+
+endif # BOARD_ADAFRUIT_FEATHER_NRF52840_ZMK
