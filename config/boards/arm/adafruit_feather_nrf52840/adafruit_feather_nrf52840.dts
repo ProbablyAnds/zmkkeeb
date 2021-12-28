@@ -70,7 +70,7 @@
  };
  
  &i2c0 {
-	 status = "okay";
+	 compatible = "nordic,nrf-twi";
 	 sda-pin = <12>;
 	 scl-pin = <11>;
  };
